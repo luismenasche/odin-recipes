@@ -1,0 +1,99 @@
+:root {
+    --color-back: wheat;
+    --color-hover: coral;
+    --color-text: black;
+}
+
+body {
+    background-color: var(--color-back);
+}
+
+h1 {
+    font-size: 36pt;
+    font-weight: bold;
+    text-align: center;
+}
+
+h2 {
+    font-size: 24pt;
+    transition: 0.4s;
+    width: fit-content;
+}
+
+p, ul, ol, .button {
+    font-size: 14pt;
+}
+
+.recipe-list li {
+    line-height: 2;
+    transition: background-color 0.4s, width 0.4s 0.4s;
+    width: 320px;
+}
+
+.recipe-list li::marker {
+    color: var(--color-back);
+}
+
+.recipe-list li:hover {
+    background-color: var(--color-hover);
+    width: 420px;
+}
+
+.recipe-list a {
+    color: var(--color-text);
+    display: block;
+    left: 0;
+    position: relative;
+    text-decoration: none;
+    transition: left 0.4s 0.4s;
+}
+
+.recipe-list a:hover {
+    left: 100px;
+}
+
+.author {
+    text-align: center;
+}
+
+img {
+    display: block;
+    height: auto;
+    margin: 0 auto;
+    width: 400px;
+}
+
+.button {
+    align-items: center;
+    background-color: var(--color-back);
+    border: 5px solid var(--color-text);
+    border-radius: 25px;
+    color: var(--color-text);
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    margin: 20px auto;
+    text-decoration: none;
+    transition: 0.4s;
+    width: 200px;
+}
+
+.button:hover {
+    background-color: var(--color-text);
+    color: var(--color-back)
+}
+
+.recipe {
+    padding-left: 50px;
+}
+
+.recipe li {
+    line-height: 1.5;
+    margin-bottom: 0.5em;
+    transition: 0.4s;
+    width: fit-content;
+}
+
+h2:hover, .recipe li:hover {
+    background-color: var(--color-hover);
+}
