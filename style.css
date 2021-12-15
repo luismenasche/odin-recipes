@@ -26,8 +26,9 @@ p, ul, ol, .button {
 
 .recipe-list li {
     line-height: 2;
-    transition: background-color 0.4s, width 0.4s 0.4s;
-    width: 320px;
+    padding-left: 0;
+    transition: background-color 0.4s, padding-left 0.4s 0.4s;
+    width: fit-content;
 }
 
 .recipe-list li::marker {
@@ -36,7 +37,7 @@ p, ul, ol, .button {
 
 .recipe-list li:hover {
     background-color: var(--color-hover);
-    width: 420px;
+    padding-left: 100px;
 }
 
 .recipe-list a {
@@ -45,11 +46,6 @@ p, ul, ol, .button {
     left: 0;
     position: relative;
     text-decoration: none;
-    transition: left 0.4s 0.4s;
-}
-
-.recipe-list a:hover {
-    left: 100px;
 }
 
 .author {
@@ -65,7 +61,6 @@ img {
 
 .button {
     align-items: center;
-    background-color: var(--color-back);
     border: 5px solid var(--color-text);
     border-radius: 25px;
     color: var(--color-text);
@@ -74,26 +69,28 @@ img {
     justify-content: center;
     margin: 20px auto;
     text-decoration: none;
-    transition: 0.4s;
+    transition: background-color 0.4s, border-color 0.3s 0.1s;
     width: 200px;
 }
 
 .button:hover {
-    background-color: var(--color-text);
-    color: var(--color-back)
+    background-color: var(--color-hover);
+    border-color: var(--color-hover);
+    /*color: var(--color-back);*/
 }
 
-.recipe {
-    padding-left: 50px;
+p.recipe, .recipe ul {
+    padding: 0;
+    margin-left: 50px;
 }
 
-.recipe li {
+p.recipe, .recipe li {
     line-height: 1.5;
     margin-bottom: 0.5em;
     transition: 0.4s;
     width: fit-content;
 }
 
-h2:hover, .recipe li:hover {
+h2:hover, p.recipe:hover, .recipe li:hover {
     background-color: var(--color-hover);
 }
