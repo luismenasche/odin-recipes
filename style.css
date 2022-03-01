@@ -58,6 +58,7 @@
     display: block;
     height: auto;
     margin: 0 auto;
+    max-width: 98vw;
     width: 400px;
 }
 
